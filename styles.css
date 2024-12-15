@@ -1,0 +1,108 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Barra lateral */
+  .sidebar {
+    background-color: #ddd;
+    padding: 15px;
+    flex: 1;
+    display: block;
+  }
+  
+  .main-content {
+    background-color: #fff;
+    padding: 20px;
+    flex: 2;
+  }
+  
+  /* Media Queries */
+  
+  /* Móviles: Menos de 600px */
+  @media (max-width: 600px) {
+    body {
+      font-size: 16px; /* Fuente más pequeña para móviles */
+    }
+  
+    .navbar {
+      flex-direction: column; /* Navegación vertical */
+      align-items: center;
+    }
+  
+    .sidebar {
+      display: none; /* Ocultamos la barra lateral en móviles */
+    }
+  }
+  
+  /* Tablets: Entre 600px y 1024px */
+  @media (min-width: 600px) and (max-width: 1024px) {
+    body {
+      font-size: 18px; /* Fuente adaptada para tabletas */
+    }
+  
+    .navbar {
+      flex-direction: row; /* Navegación horizontal */
+      justify-content: space-around;
+    }
+  
+    .sidebar {
+      display: block;
+      width: 30%; /* Barra lateral más pequeña */
+    }
+  
+    .main-content {
+      width: 70%; /* Contenido principal más ancho */
+    }
+  }
+  
+  /* Escritorios: Más de 1024px */
+  @media (min-width: 1024px) {
+    body {
+      font-size: 20px; /* Fuente más grande para pantallas grandes */
+    }
+  
+    .container {
+      display: flex;
+      flex-direction: row; /* Layout amplio */
+      gap: 30px;
+    }
+  
+    .sidebar {
+      width: 25%; /* Barra lateral más estrecha */
+    }
+  
+    .main-content {
+      width: 75%; /* El contenido principal ocupa más espacio */
+    }
+  }
+  
